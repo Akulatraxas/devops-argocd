@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
       - name: frontend
-        image: ghcr.io/akulatraxas/local-webapp-demo-frontend:INITIAL
+        image: ghcr.io/akulatraxas/local-webapp-demo-frontend:7d1777a2b05dce17cec24d80078a2948092a9f45
         ports:
         - containerPort: 80
 ---
