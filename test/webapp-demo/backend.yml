@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
       - name: backend
-        image: ghcr.io/akulatraxas/local-webapp-demo-backend:INITIAL
+        image: ghcr.io/akulatraxas/local-webapp-demo-backend
         ports:
         - containerPort: 8000
         env:
