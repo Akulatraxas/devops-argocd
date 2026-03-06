@@ -4,16 +4,18 @@ kind: Kustomization
 resources:
 - ../../base
 
-
 images:
-- name: ghcr.io/akulatraxas/local-webapp-demo-frontend
-  newTag: INITIAL
 - name: ghcr.io/akulatraxas/local-webapp-demo-backend
-  newTag: INITIAL
+  newName: ghcr.io/akulatraxas/local-webapp-demo-backend
+  newTag: b47c7c239b67c7535eb688be0055b6717cae37cd
+- name: ghcr.io/akulatraxas/local-webapp-demo-frontend
+  newName: ghcr.io/akulatraxas/local-webapp-demo-frontend
+  newTag: b47c7c239b67c7535eb688be0055b6717cae37cd
 
 configMapGenerator:
 - literals:
   - APP_ENV=test
   name: backend-config
+
 patches:
 - path: ingress-patch.yml
