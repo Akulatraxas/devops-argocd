@@ -1,14 +1,9 @@
-apiVersion: networking.k8s.io/v1
-kind: Ingress
-metadata:
-  name: webapp-ingress
-  namespace: webapp-demo
-  annotations:
-    cert-manager.io/cluster-issuer: letsencrypt-live
-spec:
-  tls:
-  - hosts:
-    - live.patagium.eu
-    secretName: live-patagium-eu-tls
-  rules:
-  - host: live.patagium.eu
+- op: replace
+  path: /spec/rules/0/host
+  value: live.patagium.eu
+- op: add
+  path: /spec/tls
+  value:
+    - hosts:
+      - live.patagium.eu
+      secretName: live-patagium-eu-tls
