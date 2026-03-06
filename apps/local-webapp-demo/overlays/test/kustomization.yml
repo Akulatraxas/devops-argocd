@@ -2,18 +2,20 @@ apiVersion: kustomize.config.k8s.io/v1beta1
 kind: Kustomization
 
 resources:
-  - ../../base
+- ../../base
 
 patchesStrategicMerge:
-  - ingress-patch.yml
+- ingress-patch.yml
 
 images:
-  - name: ghcr.io/akulatraxas/local-webapp-demo-frontend
-    newTag: INITIAL
-  - name: ghcr.io/akulatraxas/local-webapp-demo-backend
-    newTag: INITIAL
+- name: ghcr.io/akulatraxas/local-webapp-demo-backend
+  newName: ghcr.io/akulatraxas/local-webapp-demo-backend
+  newTag: b47c7c239b67c7535eb688be0055b6717cae37cd
+- name: ghcr.io/akulatraxas/local-webapp-demo-frontend
+  newName: ghcr.io/akulatraxas/local-webapp-demo-frontend
+  newTag: b47c7c239b67c7535eb688be0055b6717cae37cd
 
 configMapGenerator:
-  - name: backend-config
-    literals:
-      - APP_ENV=test
+- literals:
+  - APP_ENV=test
+  name: backend-config
