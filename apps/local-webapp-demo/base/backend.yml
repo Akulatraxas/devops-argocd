@@ -6,13 +6,6 @@ type: Opaque
 stringData:
   API_KEY: supersecret
 ---
-apiVersion: v1
-kind: ConfigMap
-metadata:
-  name: backend-config
-data:
-  APP_ENV: "test"
----
 apiVersion: apps/v1
 kind: Deployment
 metadata:
