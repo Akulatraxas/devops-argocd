@@ -8,10 +8,10 @@ resources:
 images:
 - name: ghcr.io/akulatraxas/local-webapp-demo-backend
   newName: ghcr.io/akulatraxas/local-webapp-demo-backend
-  newTag: b47c7c239b67c7535eb688be0055b6717cae37cd
+  newTag: 8f97ceb7def8f1bdeff7de065d7f45e8ca1a11a4
 - name: ghcr.io/akulatraxas/local-webapp-demo-frontend
   newName: ghcr.io/akulatraxas/local-webapp-demo-frontend
-  newTag: b47c7c239b67c7535eb688be0055b6717cae37cd
+  newTag: 8f97ceb7def8f1bdeff7de065d7f45e8ca1a11a4
 
 configMapGenerator:
 - literals:
