@@ -1,20 +1,25 @@
 apiVersion: kustomize.config.k8s.io/v1beta1
 kind: Kustomization
-namespace: webapp-demo
+namespace: webapp-demo-live
 
 resources:
 - ../../base
 
-
 images:
-- name: ghcr.io/akulatraxas/local-webapp-demo-frontend
-  newTag: INITIAL
 - name: ghcr.io/akulatraxas/local-webapp-demo-backend
-  newTag: INITIAL
+  newName: ghcr.io/akulatraxas/local-webapp-demo-backend
+  newTag: 8f97ceb7def8f1bdeff7de065d7f45e8ca1a11a4
+- name: ghcr.io/akulatraxas/local-webapp-demo-frontend
+  newName: ghcr.io/akulatraxas/local-webapp-demo-frontend
+  newTag: 8f97ceb7def8f1bdeff7de065d7f45e8ca1a11a4
 
 configMapGenerator:
 - literals:
   - APP_ENV=live
   name: backend-config
+
 patches:
-- path: ingress-patch.yml
+- target:
+    kind: Ingress
+    name: webapp-ingress
+  path: ingress-patch.yml

@@ -18,9 +18,6 @@ configMapGenerator:
   - APP_ENV=test
   name: backend-config
 
-#patches:
-#- path: ingress-patch.yml
-
 patches:
 - target:
     kind: Ingress
