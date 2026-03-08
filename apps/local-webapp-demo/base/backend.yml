@@ -35,7 +35,7 @@ spec:
           valueFrom:
             secretKeyRef:
               name: backend-secret
-              key AKUDESIRES
+              key: AKUDESIRES
 ---
 apiVersion: v1
 kind: Service
