@@ -8,10 +8,10 @@ resources:
 images:
 - name: ghcr.io/akulatraxas/local-webapp-demo-backend
   newName: ghcr.io/akulatraxas/local-webapp-demo-backend
-  newTag: 8f97ceb7def8f1bdeff7de065d7f45e8ca1a11a4
+  newTag: 5acb3be48a5c90f149542585946f2a31b1fc2528
 - name: ghcr.io/akulatraxas/local-webapp-demo-frontend
   newName: ghcr.io/akulatraxas/local-webapp-demo-frontend
-  newTag: 8f97ceb7def8f1bdeff7de065d7f45e8ca1a11a4
+  newTag: 5acb3be48a5c90f149542585946f2a31b1fc2528
 
 configMapGenerator:
 - literals:
@@ -19,7 +19,7 @@ configMapGenerator:
   name: backend-config
 
 patches:
-- target:
+- path: ingress-patch.yml
+  target:
     kind: Ingress
     name: webapp-ingress
-  path: ingress-patch.yml
