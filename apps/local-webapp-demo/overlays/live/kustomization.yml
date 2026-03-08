@@ -4,6 +4,7 @@ namespace: webapp-demo-live
 
 resources:
 - ../../base
+- sealed-secret.yml
 
 images:
 - name: ghcr.io/akulatraxas/local-webapp-demo-backend
