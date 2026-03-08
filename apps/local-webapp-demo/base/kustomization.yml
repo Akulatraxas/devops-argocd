@@ -5,3 +5,4 @@ resources:
   - backend.yml
   - frontend.yml
   - ingress.yml
+  - sealed-secret.yml
