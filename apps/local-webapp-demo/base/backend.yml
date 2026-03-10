@@ -27,7 +27,7 @@ spec:
         - containerPort: 8000
         envFrom:
         - configMapRef:
-            name: backend-config-
+            name: backend-config
         - secretRef:
             name: backend-secret-legacy
         env:
