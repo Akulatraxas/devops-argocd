@@ -36,6 +36,11 @@ spec:
             secretKeyRef:
               name: backend-secret
               key: AKUDESIRES
+        - name: AKU_FROM_INFISICAL
+          valueFrom:
+            secretKeyRef:
+              name: infi-ef-test
+              key: AKU_SECRET_STASH
 ---
 apiVersion: v1
 kind: Service
