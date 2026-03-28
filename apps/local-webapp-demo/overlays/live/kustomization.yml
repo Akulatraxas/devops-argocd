@@ -17,6 +17,7 @@ images:
 configMapGenerator:
 - literals:
   - APP_ENV=live
+  - APP_STATE="DRAGON RAWR in Live"
   name: backend-config
 
 patches:
